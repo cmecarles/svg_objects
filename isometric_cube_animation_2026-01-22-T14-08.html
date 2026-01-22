@@ -1,0 +1,38 @@
+2026-01-22-T14-08
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8" />
+<body style="margin:0;background:#fff;">
+  <svg width="400" height="1000" viewBox="0 0 400 1000" xmlns="http://www.w3.org/2000/svg">
+    <style>
+      .cube.blue .face {
+        fill: #1e88e5;
+      }
+      .cube .face {
+        stroke: #1e88e5;
+        stroke-opacity: .35;
+        stroke-width: 1;
+      }
+    </style>
+    <!-- Reusable isometric cube built around (0,0) -->
+    <defs>
+      <!-- size ~50; top rhombus + two side faces -->
+      <g id="iso-cube" class="cube">
+        <!-- Top face (diamond) -->
+        <polygon class="face" points="0,0 25,-14 50,0 25,14" />
+        <!-- Left face -->
+        <polygon class="face" points="0,0 25,14 25,64 0,50" />
+        <!-- Right face -->
+        <polygon class="face" points="50,0 25,14 25,64 50,50" />
+      </g>
+    </defs>
+    <!-- CUBE 1 (blue) -->
+    <g class="cube blue" transform="translate(20,40)">
+      <use href="#iso-cube" />
+      <!-- Move from (10,30) to (100,600) and back -->
+      <animateTransform attributeName="transform" type="translate" 
+values="10,30; 100,600; 10,30" keyTimes="0; .5; 1" dur="120s" repeatCount="indefinite" />
+    </g>
+  </svg>
+</body>
+</html>
