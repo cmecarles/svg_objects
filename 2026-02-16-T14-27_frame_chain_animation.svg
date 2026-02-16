@@ -1,0 +1,64 @@
+<svg width="300" height="300" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+	
+	<!-- FRAME -->
+		<!-- BACK SQUARE -->
+		<rect x="20" y="20" width="200" height="200" fill="none" stroke="black" stroke-width="2" />
+
+		<!-- FRONT SQUARE -->
+		<rect x="70" y="70" width="200" height="200" fill="none" stroke="black" stroke-width="2" />
+
+		<!-- TOP LEFT DIAGONAL -->
+		<line x1="20" y1="20" x2="70" y2="70" stroke="black" stroke-width="2" />
+
+		<!-- TOP RIGHT DIAGONAL -->
+		<line x1="270" y1="70" x2="220" y2="20" stroke="black" stroke-width="2" />
+
+		<!-- BOTTOM LEFT DIAGONAL -->
+		<line x1="20" y1="220" x2="70" y2="270" stroke="black" stroke-width="2" />
+
+		<!-- BOTTOM RIGHT DIAGONAL -->
+		<line x1="220" y1="220" x2="270" y2="270" stroke="black" stroke-width="2" />  
+
+	<!-- RED SQUARE MOVING -->
+	<g id="sq-red" transform="translate(20 20)">
+		<rect x="-10" y="-10" width="20" height="20" fill="none" stroke="red" stroke-width="2" />
+
+		<!-- A: TL to TR -->
+		<animateTransform id="A" attributeName="transform" type="translate" from="20 20" to="220 20" dur="1s" begin="0s;EA.end" fill="remove" />
+
+		<!-- B: TR to BR -->
+		<animateTransform id="B" attributeName="transform" type="translate" from="220 20" to="220 220" dur="1s" begin="A.end" fill="remove" />
+
+		<!-- C: BR to BL -->
+		<animateTransform id="CA" attributeName="transform" type="translate" from="220 220" to="20 220" dur="1s" begin="B.end" fill="remove" />
+
+		<!-- D: BL STOP -->
+		<animateTransform id="DA" attributeName="transform" type="translate" from="20 220" to="20 220" dur="1s" begin="CA.end" fill="remove" />
+		
+		<!-- EA: BL to TL -->
+		<animateTransform id="EA" attributeName="transform" type="translate" from="20 220" to="20 20" dur="2s" begin="DA.end" fill="remove" />
+	</g>
+	
+	<!-- BLUE SQUARE MOVING -->
+	<g id="sq-red" transform="translate(20 20)">
+		<rect x="-10" y="-10" width="20" height="20" fill="none" stroke="blue" stroke-width="2" />
+
+		<!-- A: TL to TR -->
+		<animateTransform id="A" attributeName="transform" type="translate" from="20 20" to="220 20" dur="1s" begin="0s;EB.end" fill="remove" />
+
+		<!-- B: TR to BR -->
+		<animateTransform id="B" attributeName="transform" type="translate" from="220 20" to="220 220" dur="1s" begin="A.end" fill="remove" />
+
+		<!-- CB: BR to BBR -->
+		<animateTransform id="CB" attributeName="transform" type="translate" from="220 220" to="270 270" dur="1s" begin="B.end" fill="remove" />
+		
+		<!-- CC: BBR to BBL -->
+		<animateTransform id="CC" attributeName="transform" type="translate" from="270 270" to="70 270" dur="1s" begin="CB.end" fill="remove" />
+		
+		<!-- CD: Bottom Bottom Left to Bottom Top Right -->
+		<animateTransform id="CD" attributeName="transform" type="translate" from="70 270" to="70 70" dur="1s" begin="CC.end" fill="remove" />
+		
+		<!-- EB: Bottom Bottom Left to Bottom Top Right -->
+		<animateTransform id="EB" attributeName="transform" type="translate" from="70 70" to="20 20" dur="1s" begin="CD.end" fill="remove" />
+	</g>
+</svg>
