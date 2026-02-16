@@ -1,0 +1,37 @@
+<svg width="260" height="260" viewBox="0 0 260 260" xmlns="http://www.w3.org/2000/svg">
+  <!-- static frame -->
+  <rect x="20" y="20" width="200" height="200" fill="none" stroke="black"/>
+
+  <!-- moving square -->
+  <g id="sq" transform="translate(20 20)">
+    <rect x="-10" y="-10" width="20" height="20" fill="none" stroke="red" stroke-width="2"/>
+
+    <!-- A: TL -> TR -->
+    <animateTransform id="A"
+      attributeName="transform" type="translate"
+      from="20 20" to="220 20"
+      dur="1s" begin="0s;D.end"
+      fill="remove" />
+
+    <!-- B: TR -> BR -->
+    <animateTransform id="B"
+      attributeName="transform" type="translate"
+      from="220 20" to="220 220"
+      dur="1s" begin="A.end"
+      fill="remove" />
+
+    <!-- C: BR -> BL -->
+    <animateTransform id="C"
+      attributeName="transform" type="translate"
+      from="220 220" to="20 220"
+      dur="1s" begin="B.end"
+      fill="remove" />
+
+    <!-- D: BL -> TL -->
+    <animateTransform id="D"
+      attributeName="transform" type="translate"
+      from="20 220" to="20 20"
+      dur="1s" begin="C.end"
+      fill="remove" />
+  </g>
+</svg>
