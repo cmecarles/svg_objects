@@ -86,7 +86,7 @@
 		<!-- BOTTOM RIGHT DIAGONAL -->
 		<line x1="320" y1="320" x2="670" y2="670" stroke="black" stroke-width="1" />
 	
-	<!-- CUBES -->			
+	<!-- MOVING CUBES -->			
 		<g id="red-cube-1">
 			<rect x="-10" y="-10" width="20" height="20" fill="none" stroke="red" stroke-width="2" />
 			<rect x="-3" y="0" width="20" height="20" fill="none" stroke="red" stroke-width="2" />
