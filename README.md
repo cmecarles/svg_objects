@@ -1,3 +1,3 @@
 # svg_training
 
-<img src="README.svg" width="500" />
+<img src="2026-02-22-T15-15_FSM_animation.svg" width="500" />
