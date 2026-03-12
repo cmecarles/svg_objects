@@ -1,3 +1,3 @@
 # svg_training
 
-<img src="animation.svg" width="500" />
+<img src="README.svg" width="500" />
