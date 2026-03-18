@@ -11,3 +11,7 @@
 ---
 ## 2026-02-16-T16-32_FSM_animation.svg
 <img src="2026-02-16-T16-32_FSM_animation.svg" width="500" />
+
+---
+## 2026-02-16-T14-27_FSM_animation.svg
+<img src="2026-02-16-T14-27_FSM_animation.svg" width="500" />
